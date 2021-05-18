@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ListaCalifFX.jnlp">
+  <information>
+    <title>ListaCalifFX</title>
+    <vendor>saula</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ListaCalifFX.jar" size="181262" download="eager" />
+    <jar href="lib\commons-lang3-3.12.0.jar" size="587402" download="eager" />
+    <jar href="lib\jpl.jar" size="37039" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="GUI.Main"  name="ListaCalifFX" />
+  <update check="always"/>
+</jnlp>
