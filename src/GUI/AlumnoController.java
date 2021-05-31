@@ -1,3 +1,20 @@
+/*
+	<Lista Calificaciones: List of Scores for Schools>
+	Copyright (C) <2021>  <A01208320> <A01208320@itesm.mx>
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
 package GUI;
 
 import java.io.IOException;
@@ -25,13 +42,11 @@ import javafx.stage.Stage;
 import parallel.ListaCalif;
 
 public class AlumnoController implements Initializable {
-	@FXML private ChoiceBox<String> GradoFilter;
 	@FXML private ChoiceBox<String> GrupoFilter;
 	
 	@FXML private TableView<TableData> AlumnoTable;
-	@FXML private TableColumn<TableData, String> AlumnoGrado;
 	@FXML private TableColumn<TableData, String> AlumnoGrupo;
-	@FXML private TableColumn<TableData, String> AlumnoNL;
+	@FXML private TableColumn<TableData, Integer> AlumnoNL;
 	@FXML private TableColumn<TableData, String> AlumnoNombre;
 
 	private Stage stage;
@@ -55,33 +70,32 @@ public class AlumnoController implements Initializable {
 
 	public void Search() {
             if(success){
-                AlumnoTable.setItems(getAlumnos(GradoFilter.getValue(), GrupoFilter.getValue()));   
+                AlumnoTable.setItems(getAlumnos(GrupoFilter.getValue()));   
             }
 	}
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		String[] Grupo= {"Todos","A", "B"};
-		GrupoFilter.getItems().addAll(Grupo);
+            try {
+                GrupoFilter.getItems().addAll(app.Grupo_Filter());
+            } catch (InterruptedException ex) {
+                Logger.getLogger(AlumnoController.class.getName()).log(Level.SEVERE, null, ex);
+            }
 		GrupoFilter.setValue("Todos");
-		String[] Grado= {"Todos", "1", "2", "3", "4", "5", "6"};
-		GradoFilter.getItems().addAll(Grado);
-		GradoFilter.setValue("Todos");
 		
 		AlumnoTable.setPlaceholder(new Label("Oprima el boton de buscar para buscar alumnos."));
 		
-		AlumnoGrado.setCellValueFactory(new PropertyValueFactory<>("grado"));
 		AlumnoGrupo.setCellValueFactory(new PropertyValueFactory<>("grupo"));
 		AlumnoNL.setCellValueFactory(new PropertyValueFactory<>("NL"));
 		AlumnoNombre.setCellValueFactory(new PropertyValueFactory<>("nombreAlu"));
 	}
 
-	private ObservableList<TableData> getAlumnos(String grado, String grupo) {
+	private ObservableList<TableData> getAlumnos(String grupo) {
             ObservableList<TableData> mat = FXCollections.observableArrayList();
             
             // Get queries from Alumnos
             try {
-                Map<Integer, TableData> data = app.Consultar_Alumnos(grado, grupo);
+                Map<Integer, TableData> data = app.Consultar_Alumnos(grupo);
                 if(!data.isEmpty()){
                     for (int i = 0; i < data.size(); i++) {
 			mat.add(data.get(i));

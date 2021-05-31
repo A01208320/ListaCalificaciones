@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ListaCalifFX.jar" size="181262" download="eager" />
+    <jar href="ListaCalifFX.jar" size="183506" download="eager" />
     <jar href="lib\commons-lang3-3.12.0.jar" size="587402" download="eager" />
     <jar href="lib\jpl.jar" size="37039" download="eager" />
   </resources>

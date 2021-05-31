@@ -1,3 +1,20 @@
+/*
+	<Lista Calificaciones: List of Scores for Schools>
+	Copyright (C) <2021>  <A01208320> <A01208320@itesm.mx>
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
 package prolog;
 
 import org.jpl7.*;
@@ -28,23 +45,40 @@ public class PrologQueries {
         return null;
     }
     
-    //? listaMaterias(X). % Regresa una lista de todas las Materias.
+    //? lista materias
     public void listaMaterias() {
         q = new Query("listaMaterias(X).");
         solutions = q.allSolutions();
     }
     
-    //? listaAlumnos(X) % Regresa una lista de Alumnos
-    public void listaAlumnos(String grado, String grupo) {
-        q = new Query("listaAlumnos("+grado+", "+grupo+", X).");
-        //System.out.println(q);
+    //? lista alumnos
+    public void listaAlumnos(String grupo) {
+        q = new Query("listaAlumnos("+grupo+", X).");
+        solutions = q.allSolutions();
+    }
+    public void listaAlumnosAll(String grupo) {
+        q = new Query("listaAlumnosAll("+grupo+", X).");
         solutions = q.allSolutions();
     }
     
-  //? listaAlumnos(X) % Regresa una lista de Alumnos
-    public void listaCalif(String periodo, String materia, String grado, String grupo) {
-        q = new Query("getCalif("+periodo+", "+materia+", "+grado+", "+grupo+", X).");
+  //? lista calificaciones
+    public void listaCalif(String periodo, String materia, String grupo) {
+        q = new Query("getCalif("+periodo+", "+materia+", "+grupo+", X).");
         solutions = q.allSolutions();
+    }
+    public void listaCalifAll(String periodo, String materia, String grupo) {
+        q = new Query("getCalifAll("+periodo+", "+materia+", "+grupo+", X).");
+        solutions = q.allSolutions();
+    }
+    
+    //? lista los grupos
+    public void listaGrupos(){
+        q=new Query("getGrupos(X).");
+        solutions=q.allSolutions();
+    }
+    public void listaPeriodos(){
+        q=new Query("getPeriods(X).");
+        solutions=q.allSolutions();
     }
     
     //? Regresa un unico codigo de materia
@@ -58,9 +92,9 @@ public class PrologQueries {
     
     //? Regresa la informacion de un unico alumno
     public synchronized String[] alumno(String nombre) {
-    	qa=new Query("alumno('"+nombre+"' , X, Y, Z)");
+    	qa=new Query("alumno('"+nombre+"' , X, Y)");
     	if(qa.hasSolution()) {
-    		String[] alumn= {qa.oneSolution().get("X").toString(), qa.oneSolution().get("Y").toString(), qa.oneSolution().get("Z").toString()};
+    		String[] alumn= {qa.oneSolution().get("X").toString(), qa.oneSolution().get("Y").toString()};
     		return alumn;
     	}
     	return null;

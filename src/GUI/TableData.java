@@ -1,37 +1,55 @@
+/*
+	<Lista Calificaciones: List of Scores for Schools>
+	Copyright (C) <2021>  <A01208320> <A01208320@itesm.mx>
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
 package GUI;
 
 public class TableData {
 	// Materia
-	private String nombreMat, codigo;
+	private String nombreMat;
+        private int codigo;
 	// Alumno
-	private String nombreAlu, grado, grupo, NL;
+	private String nombreAlu, grupo;
+        private int NL;
 	// Calificacion
-	private String periodo, calificacion;
+	private int periodo, calificacion;
         // Filter
         private String filter;
 	
 	// Materia Constructor
 	public TableData(String nombreMat, String codigo) {
 		this.nombreMat=nombreMat;
-		this.codigo=codigo;
+		this.codigo=Integer.parseInt(codigo);
 	}
 	
 	// Alumno Constructor
-	public TableData(String nombreAlu, String grado, String grupo, String NL) {
+	public TableData(String nombreAlu, String grupo, String NL) {
 		this.nombreAlu=nombreAlu;
 		this.grupo=grupo;
-		this.grado=grado;
-		this.NL=NL;
+		this.NL=Integer.parseInt(NL);
 	}
 	
 	// Calificacion Constructor
-	public TableData(String periodo, String grado, String grupo, String nombreMat, String nombreAlu, String calificacion) {
-		this.periodo = periodo;
-		this.grado = grado;
-		this.calificacion = calificacion;
-		this.grupo = grupo;
-		this.nombreMat = nombreMat;
-		this.nombreAlu = nombreAlu;
+	public TableData(String periodo,String nombreMat, String grupo, String NL, String nombreAlu, String calificacion) {
+		this.periodo = Integer.parseInt(periodo);
+                this.nombreMat = nombreMat;
+                this.grupo = grupo;
+                this.NL=Integer.parseInt(NL);
+                this.nombreAlu = nombreAlu;
+		this.calificacion = Integer.parseInt(calificacion);
 	}
         
         // Filter Constructor
@@ -48,11 +66,11 @@ public class TableData {
 		this.nombreMat = nombreMat;
 	}
 
-	public String getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(String codigo) {
+	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
 
@@ -64,14 +82,6 @@ public class TableData {
 		this.nombreAlu = nombreAlu;
 	}
 
-	public String getGrado() {
-		return grado;
-	}
-
-	public void setGrado(String grado) {
-		this.grado = grado;
-	}
-
 	public String getGrupo() {
 		return grupo;
 	}
@@ -80,27 +90,27 @@ public class TableData {
 		this.grupo = grupo;
 	}
 
-	public String getNL() {
+	public int getNL() {
 		return NL;
 	}
 
-	public void setNL(String nL) {
+	public void setNL(int nL) {
 		NL = nL;
 	}
 
-	public String getPeriodo() {
+	public int getPeriodo() {
 		return periodo;
 	}
 
-	public void setPeriodo(String periodo) {
+	public void setPeriodo(int periodo) {
 		this.periodo = periodo;
 	}
 
-	public String getCalificacion() {
+	public int getCalificacion() {
             return calificacion;
 	}
 
-	public void setCalificacion(String calificacion) {
+	public void setCalificacion(int calificacion) {
             this.calificacion = calificacion;
 	}
         

@@ -21,17 +21,15 @@
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="10.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="5.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="5.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="300.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="5.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="10.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="5.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="5.0" vgrow="SOMETIMES" />
@@ -39,8 +37,7 @@
           <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ConsultMenu" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Alumnos" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="1">
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Alumnos" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="1">
                <font>
                   <Font name="Arial" size="36.0" />
                </font>
@@ -48,30 +45,28 @@
                   <Blend />
                </effect>
             </Label>
-            <TableView fx:id="AlumnoTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="278.0" prefWidth="571.0" GridPane.columnIndex="1" GridPane.columnSpan="7" GridPane.rowIndex="5">
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ConsultMenu" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TableView fx:id="AlumnoTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="278.0" prefWidth="571.0" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="5">
               <columns>
-                <TableColumn fx:id="AlumnoGrado" editable="false" prefWidth="71.20000779628754" text="Grado" />
                 <TableColumn fx:id="AlumnoGrupo" editable="false" prefWidth="65.60004425048828" text="Grupo" />
-                  <TableColumn fx:id="AlumnoNL" editable="false" prefWidth="137.6000213623047" text="Numero de Lista" />
-                  <TableColumn fx:id="AlumnoNombre" editable="false" prefWidth="986.3999328613281" text="Nombre" />
+                  <TableColumn fx:id="AlumnoNL" editable="false" prefWidth="108.00003814697266" text="Numero de Lista" />
+                  <TableColumn fx:id="AlumnoNombre" editable="false" prefWidth="1016.7998504638672" text="Nombre" />
               </columns>
             </TableView>
-            <ChoiceBox fx:id="GradoFilter" maxWidth="1.7976931348623157E308" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Grado" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="TOP" />
-            <ChoiceBox fx:id="GrupoFilter" maxWidth="1.7976931348623157E308" prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Grupo" GridPane.columnIndex="5" GridPane.rowIndex="3" GridPane.valignment="TOP" />
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Search" GridPane.columnIndex="7" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+            <ChoiceBox fx:id="GrupoFilter" maxWidth="1.7976931348623157E308" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Grupo" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Search" GridPane.columnIndex="5" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
             <ImageView fitHeight="50.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <image>
                   <Image url="@img/Return.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="50.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3">
+            <ImageView fitHeight="50.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3">
                <image>
                   <Image url="@img/Search.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <image>
                   <Image url="@img/Alumnos.png" />
                </image>

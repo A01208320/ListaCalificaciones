@@ -35,7 +35,7 @@
         </columnConstraints>
         <rowConstraints>
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="5.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="5.0" vgrow="SOMETIMES" />
@@ -43,19 +43,19 @@
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ConsultMenu" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
             <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Calificaciones" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial" size="36.0" />
                </font>
             </Label>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ConsultMenu" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
             <TableView fx:id="CalifTable" maxWidth="1.7976931348623157E308" prefHeight="290.0" prefWidth="559.0" GridPane.columnIndex="1" GridPane.columnSpan="11" GridPane.rowIndex="5">
               <columns>
                   <TableColumn fx:id="CalifPeriodo" editable="false" maxWidth="1.7976931348623157E308" prefWidth="75.20000779628754" text="Periodo" />
-                <TableColumn fx:id="CalifMateria" editable="false" maxWidth="1.7976931348623157E308" prefWidth="325.5999984741211" text="Materia" />
-                  <TableColumn fx:id="CalifGrado" editable="false" maxWidth="1.7976931348623157E308" prefWidth="76.800048828125" text="Grado" />
-                <TableColumn fx:id="CalifGrupo" editable="false" maxWidth="1.7976931348623157E308" prefWidth="84.00003051757812" text="Grupo" />
-                  <TableColumn fx:id="CalifNombre" editable="false" maxWidth="1.7976931348623157E308" prefWidth="567.9998168945312" text="Nombre" />
+                <TableColumn fx:id="CalifMateria" editable="false" maxWidth="1.7976931348623157E308" prefWidth="232.0000228881836" text="Materia" />
+                <TableColumn fx:id="CalifGrupo" editable="false" maxWidth="1.7976931348623157E308" prefWidth="52.800048828125" text="Grupo" />
+                  <TableColumn fx:id="CalifNL" editable="false" maxWidth="1.7976931348623157E308" prefWidth="109.5999755859375" text="Numero de Lista" />
+                  <TableColumn fx:id="CalifNombre" editable="false" maxWidth="1.7976931348623157E308" prefWidth="662.3999328613281" text="Nombre" />
                   <TableColumn fx:id="CalifCalif" editable="false" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="136.00006103515625" text="Calificación" />
               </columns>
             </TableView>
@@ -66,12 +66,10 @@
             </Button>
             <ChoiceBox fx:id="GrupoFilter" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="164.0" GridPane.columnIndex="9" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
             <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Grupo" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />
-            <ChoiceBox fx:id="GradoFilter" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="31.0" GridPane.columnIndex="7" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Grado" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />
-            <ChoiceBox fx:id="MateriaFilter" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Materia" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />
-            <ChoiceBox fx:id="PeriodoFilter" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="168.0" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Bimestre" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <ChoiceBox fx:id="MateriaFilter" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="150.0" GridPane.columnIndex="7" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Materia" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <ChoiceBox fx:id="PeriodoFilter" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="168.0" GridPane.columnIndex="5" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Bimestre" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />
             <ImageView fitHeight="50.0" fitWidth="50.0" mouseTransparent="true" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <image>
                   <Image url="@img/Return.png" />

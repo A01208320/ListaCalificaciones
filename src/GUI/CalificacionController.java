@@ -1,3 +1,20 @@
+/*
+	<Lista Calificaciones: List of Scores for Schools>
+	Copyright (C) <2021>  <A01208320> <A01208320@itesm.mx>
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
 package GUI;
 
 import java.io.IOException;
@@ -27,16 +44,15 @@ import parallel.ListaCalif;
 public class CalificacionController implements Initializable{
 	@FXML private ChoiceBox<String> PeriodoFilter;
 	@FXML private ChoiceBox<String> MateriaFilter;
-	@FXML private ChoiceBox<String> GradoFilter;
 	@FXML private ChoiceBox<String> GrupoFilter;
 	
 	@FXML private TableView<TableData> CalifTable;
-	@FXML private TableColumn<TableData, String> CalifPeriodo;
+	@FXML private TableColumn<TableData, Integer> CalifPeriodo;
+        @FXML private TableColumn<TableData, Integer> CalifNL;
 	@FXML private TableColumn<TableData, String> CalifMateria;
-	@FXML private TableColumn<TableData, String> CalifGrado;
 	@FXML private TableColumn<TableData, String> CalifGrupo;
 	@FXML private TableColumn<TableData, String> CalifNombre;
-	@FXML private TableColumn<TableData, String> CalifCalif;
+	@FXML private TableColumn<TableData, Integer> CalifCalif;
 	
 	private Stage stage;
 	private Scene scene;
@@ -58,7 +74,7 @@ public class CalificacionController implements Initializable{
 	
 	public void Search() {
             if(success){
-                CalifTable.setItems(getCalif(PeriodoFilter.getValue(), MateriaFilter.getValue(), GradoFilter.getValue(), GrupoFilter.getValue()));
+                CalifTable.setItems(getCalif(PeriodoFilter.getValue(), MateriaFilter.getValue(), GrupoFilter.getValue()));
             }
         }
 	
@@ -67,38 +83,32 @@ public class CalificacionController implements Initializable{
             try {
                 MateriaFilter.getItems().addAll(app.Materia_Filter());
                 MateriaFilter.setValue("Todos");
-                
-                String[] Periodo= {"Todos", "1", "2", "3", "4", "5", "6"};
-                PeriodoFilter.getItems().addAll(Periodo);
+                PeriodoFilter.getItems().addAll(app.Periodo_Filter());
                 PeriodoFilter.setValue("Todos");
-                String[] Grupo= {"Todos","A", "B"};
-                GrupoFilter.getItems().addAll(Grupo);
+                GrupoFilter.getItems().addAll(app.Grupo_Filter());
                 GrupoFilter.setValue("Todos");
-                String[] Grado= {"Todos", "1", "2", "3", "4", "5", "6"};
-                GradoFilter.getItems().addAll(Grado);
-                GradoFilter.setValue("Todos");
                 
                 CalifTable.setPlaceholder(new Label("Presione el boton de buscar para buscar Calificaciones."));
             } catch (InterruptedException ex) {
                 success=false;
-                CalifTable.setPlaceholder(new Label("Error en el filtro de Materia."));
+                CalifTable.setPlaceholder(new Label("Error en el filtros."));
                 Logger.getLogger(CalificacionController.class.getName()).log(Level.SEVERE, null, ex);
             }
 
             CalifPeriodo.setCellValueFactory(new PropertyValueFactory<>("periodo"));
+            CalifNL.setCellValueFactory(new PropertyValueFactory<>("NL"));
             CalifMateria.setCellValueFactory(new PropertyValueFactory<>("nombreMat"));
-            CalifGrado.setCellValueFactory(new PropertyValueFactory<>("grado"));
             CalifGrupo.setCellValueFactory(new PropertyValueFactory<>("grupo"));
             CalifNombre.setCellValueFactory(new PropertyValueFactory<>("nombreAlu"));
             CalifCalif.setCellValueFactory(new PropertyValueFactory<>("calificacion"));
 	}
 	
-	private ObservableList<TableData> getCalif(String periodo, String materia, String grado, String grupo) {
+	private ObservableList<TableData> getCalif(String periodo, String materia, String grupo) {
             ObservableList<TableData> mat = FXCollections.observableArrayList();
             
             // Get all queries from Calificaciones
             try {
-                Map<Integer, TableData> data = app.Consultar_Calif(periodo, materia, grado, grupo);
+                Map<Integer, TableData> data = app.Consultar_Calif(periodo, materia, grupo);
                 if(!data.isEmpty()){
                     for (int i = 0; i < data.size(); i++) {
                         mat.add(data.get(i));

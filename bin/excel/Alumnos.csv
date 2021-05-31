@@ -1,37 +1,51 @@
-Grado,Grupo,N�mero de Lista,Nombre
-5,A,1,A00232156
-5,B,2,A00570654
-3,B,3,A01066352
-3,A,4,A01153661
-2,A,5,A01206849
-4,B,6,A01207490
-4,B,7,A01207525
-4,B,8,A01207648
-1,A,9,A01208050
-4,B,10,A01208320
-4,B,11,A01208733
-5,B,12,A01208905
-4,B,13,A01208937
-1,B,14,A01208970
-3,A,15,A01209400
-4,A,16,A01233416
-3,A,17,A01251333
-1,B,18,A01651517
-3,B,19,A01700043
-1,B,20,A01700284
-3,A,21,A01701180
-5,A,22,A01701221
-3,B,23,A01701248
-4,A,24,A01701980
-2,A,25,A01702388
-1,A,26,A01702686
-3,A,27,A01702863
-1,B,28,A01703171
-3,A,29,A01703424
-5,B,30,A01703860
-5,B,31,A01703947
-4,B,32,A01704320
-5,B,33,A01704340
-5,B,34,A01704384
-1,A,35,A01704446
-1,B,36,A01704671
+Número de Lista,1A,1B,2A,2B,3A,3B,4A,4B,5A,5B,6A,6B
+1,Student 1 1A,Student 1 1B,Student 1 2A,Student 1 2B,Student 1 3A,Student 1 3B,Student 1 4A,Student 1 4B,Student 1 5A,Student 1 5B,Student 1 6A,Student 1 6B
+2,Student 2 1A,Student 2 1B,Student 2 2A,Student 2 2B,Student 2 3A,Student 2 3B,Student 2 4A,Student 2 4B,Student 2 5A,Student 2 5B,Student 2 6A,Student 2 6B
+3,Student 3 1A,Student 3 1B,Student 3 2A,Student 3 2B,Student 3 3A,Student 3 3B,Student 3 4A,Student 3 4B,Student 3 5A,Student 3 5B,Student 3 6A,Student 3 6B
+4,Student 4 1A,Student 4 1B,Student 4 2A,Student 4 2B,Student 4 3A,Student 4 3B,Student 4 4A,Student 4 4B,Student 4 5A,Student 4 5B,Student 4 6A,Student 4 6B
+5,Student 5 1A,Student 5 1B,Student 5 2A,Student 5 2B,Student 5 3A,Student 5 3B,Student 5 4A,Student 5 4B,Student 5 5A,Student 5 5B,Student 5 6A,Student 5 6B
+6,Student 6 1A,Student 6 1B,Student 6 2A,Student 6 2B,Student 6 3A,Student 6 3B,Student 6 4A,Student 6 4B,Student 6 5A,Student 6 5B,Student 6 6A,Student 6 6B
+7,Student 7 1A,Student 7 1B,Student 7 2A,Student 7 2B,Student 7 3A,Student 7 3B,Student 7 4A,Student 7 4B,Student 7 5A,Student 7 5B,Student 7 6A,Student 7 6B
+8,Student 8 1A,Student 8 1B,Student 8 2A,Student 8 2B,Student 8 3A,Student 8 3B,Student 8 4A,Student 8 4B,Student 8 5A,Student 8 5B,Student 8 6A,Student 8 6B
+9,Student 9 1A,Student 9 1B,Student 9 2A,Student 9 2B,Student 9 3A,Student 9 3B,Student 9 4A,Student 9 4B,Student 9 5A,Student 9 5B,Student 9 6A,Student 9 6B
+10,Student 10 1A,Student 10 1B,Student 10 2A,Student 10 2B,Student 10 3A,Student 10 3B,Student 10 4A,Student 10 4B,Student 10 5A,Student 10 5B,Student 10 6A,Student 10 6B
+11,Student 11 1A,Student 11 1B,Student 11 2A,Student 11 2B,Student 11 3A,Student 11 3B,Student 11 4A,Student 11 4B,Student 11 5A,Student 11 5B,Student 11 6A,Student 11 6B
+12,Student 12 1A,Student 12 1B,Student 12 2A,Student 12 2B,Student 12 3A,Student 12 3B,Student 12 4A,Student 12 4B,Student 12 5A,Student 12 5B,Student 12 6A,Student 12 6B
+13,Student 13 1A,Student 13 1B,Student 13 2A,Student 13 2B,Student 13 3A,Student 13 3B,Student 13 4A,Student 13 4B,Student 13 5A,Student 13 5B,Student 13 6A,Student 13 6B
+14,Student 14 1A,Student 14 1B,Student 14 2A,Student 14 2B,Student 14 3A,Student 14 3B,Student 14 4A,Student 14 4B,Student 14 5A,Student 14 5B,Student 14 6A,Student 14 6B
+15,Student 15 1A,Student 15 1B,Student 15 2A,Student 15 2B,Student 15 3A,Student 15 3B,Student 15 4A,Student 15 4B,Student 15 5A,Student 15 5B,Student 15 6A,Student 15 6B
+16,Student 16 1A,Student 16 1B,Student 16 2A,Student 16 2B,Student 16 3A,Student 16 3B,Student 16 4A,Student 16 4B,Student 16 5A,Student 16 5B,Student 16 6A,Student 16 6B
+17,Student 17 1A,Student 17 1B,Student 17 2A,Student 17 2B,Student 17 3A,Student 17 3B,Student 17 4A,Student 17 4B,Student 17 5A,Student 17 5B,Student 17 6A,Student 17 6B
+18,Student 18 1A,Student 18 1B,Student 18 2A,Student 18 2B,Student 18 3A,Student 18 3B,Student 18 4A,Student 18 4B,Student 18 5A,Student 18 5B,Student 18 6A,Student 18 6B
+19,Student 19 1A,Student 19 1B,Student 19 2A,Student 19 2B,Student 19 3A,Student 19 3B,Student 19 4A,Student 19 4B,Student 19 5A,Student 19 5B,Student 19 6A,Student 19 6B
+20,Student 20 1A,Student 20 1B,Student 20 2A,Student 20 2B,Student 20 3A,Student 20 3B,Student 20 4A,Student 20 4B,Student 20 5A,Student 20 5B,Student 20 6A,Student 20 6B
+21,Student 21 1A,Student 21 1B,Student 21 2A,Student 21 2B,Student 21 3A,Student 21 3B,Student 21 4A,Student 21 4B,Student 21 5A,Student 21 5B,Student 21 6A,Student 21 6B
+22,Student 22 1A,Student 22 1B,Student 22 2A,Student 22 2B,Student 22 3A,Student 22 3B,Student 22 4A,Student 22 4B,Student 22 5A,Student 22 5B,Student 22 6A,Student 22 6B
+23,Student 23 1A,Student 23 1B,Student 23 2A,Student 23 2B,Student 23 3A,Student 23 3B,Student 23 4A,Student 23 4B,Student 23 5A,Student 23 5B,Student 23 6A,Student 23 6B
+24,Student 24 1A,Student 24 1B,Student 24 2A,Student 24 2B,Student 24 3A,Student 24 3B,Student 24 4A,Student 24 4B,Student 24 5A,Student 24 5B,Student 24 6A,Student 24 6B
+25,Student 25 1A,Student 25 1B,Student 25 2A,Student 25 2B,Student 25 3A,Student 25 3B,Student 25 4A,Student 25 4B,Student 25 5A,Student 25 5B,Student 25 6A,Student 25 6B
+26,Student 26 1A,Student 26 1B,Student 26 2A,Student 26 2B,Student 26 3A,Student 26 3B,Student 26 4A,Student 26 4B,Student 26 5A,Student 26 5B,Student 26 6A,Student 26 6B
+27,Student 27 1A,Student 27 1B,Student 27 2A,Student 27 2B,Student 27 3A,Student 27 3B,Student 27 4A,Student 27 4B,Student 27 5A,Student 27 5B,Student 27 6A,Student 27 6B
+28,Student 28 1A,Student 28 1B,Student 28 2A,Student 28 2B,Student 28 3A,Student 28 3B,Student 28 4A,Student 28 4B,Student 28 5A,Student 28 5B,Student 28 6A,Student 28 6B
+29,Student 29 1A,Student 29 1B,Student 29 2A,Student 29 2B,Student 29 3A,Student 29 3B,Student 29 4A,Student 29 4B,Student 29 5A,Student 29 5B,Student 29 6A,Student 29 6B
+30,Student 30 1A,Student 30 1B,Student 30 2A,Student 30 2B,Student 30 3A,Student 30 3B,Student 30 4A,Student 30 4B,Student 30 5A,Student 30 5B,Student 30 6A,Student 30 6B
+31,Student 31 1A,Student 31 1B,Student 31 2A,Student 31 2B,Student 31 3A,Student 31 3B,Student 31 4A,Student 31 4B,Student 31 5A,Student 31 5B,Student 31 6A,Student 31 6B
+32,Student 32 1A,Student 32 1B,Student 32 2A,Student 32 2B,Student 32 3A,Student 32 3B,Student 32 4A,Student 32 4B,Student 32 5A,Student 32 5B,Student 32 6A,Student 32 6B
+33,Student 33 1A,Student 33 1B,Student 33 2A,Student 33 2B,Student 33 3A,Student 33 3B,Student 33 4A,Student 33 4B,Student 33 5A,Student 33 5B,Student 33 6A,Student 33 6B
+34,Student 34 1A,Student 34 1B,Student 34 2A,Student 34 2B,Student 34 3A,Student 34 3B,Student 34 4A,Student 34 4B,Student 34 5A,Student 34 5B,Student 34 6A,Student 34 6B
+35,Student 35 1A,Student 35 1B,Student 35 2A,Student 35 2B,Student 35 3A,Student 35 3B,Student 35 4A,Student 35 4B,Student 35 5A,Student 35 5B,Student 35 6A,Student 35 6B
+36,Student 36 1A,Student 36 1B,Student 36 2A,Student 36 2B,Student 36 3A,Student 36 3B,Student 36 4A,Student 36 4B,Student 36 5A,Student 36 5B,Student 36 6A,Student 36 6B
+37,Student 37 1A,Student 37 1B,Student 37 2A,Student 37 2B,Student 37 3A,Student 37 3B,Student 37 4A,Student 37 4B,Student 37 5A,Student 37 5B,Student 37 6A,Student 37 6B
+38,Student 38 1A,Student 38 1B,Student 38 2A,Student 38 2B,Student 38 3A,Student 38 3B,Student 38 4A,Student 38 4B,Student 38 5A,Student 38 5B,Student 38 6A,Student 38 6B
+39,Student 39 1A,Student 39 1B,Student 39 2A,Student 39 2B,Student 39 3A,Student 39 3B,Student 39 4A,Student 39 4B,Student 39 5A,Student 39 5B,Student 39 6A,Student 39 6B
+40,Student 40 1A,Student 40 1B,Student 40 2A,Student 40 2B,Student 40 3A,Student 40 3B,Student 40 4A,Student 40 4B,Student 40 5A,Student 40 5B,Student 40 6A,Student 40 6B
+41,Student 41 1A,Student 41 1B,Student 41 2A,Student 41 2B,Student 41 3A,Student 41 3B,Student 41 4A,Student 41 4B,Student 41 5A,Student 41 5B,Student 41 6A,Student 41 6B
+42,Student 42 1A,Student 42 1B,Student 42 2A,Student 42 2B,Student 42 3A,Student 42 3B,Student 42 4A,Student 42 4B,Student 42 5A,Student 42 5B,Student 42 6A,Student 42 6B
+43,Student 43 1A,Student 43 1B,Student 43 2A,Student 43 2B,Student 43 3A,Student 43 3B,Student 43 4A,Student 43 4B,Student 43 5A,Student 43 5B,Student 43 6A,Student 43 6B
+44,Student 44 1A,Student 44 1B,Student 44 2A,Student 44 2B,Student 44 3A,Student 44 3B,Student 44 4A,Student 44 4B,Student 44 5A,Student 44 5B,Student 44 6A,Student 44 6B
+45,Student 45 1A,Student 45 1B,Student 45 2A,Student 45 2B,Student 45 3A,Student 45 3B,Student 45 4A,Student 45 4B,Student 45 5A,Student 45 5B,Student 45 6A,Student 45 6B
+46,Student 46 1A,Student 46 1B,Student 46 2A,Student 46 2B,Student 46 3A,Student 46 3B,Student 46 4A,Student 46 4B,Student 46 5A,Student 46 5B,Student 46 6A,Student 46 6B
+47,Student 47 1A,Student 47 1B,Student 47 2A,Student 47 2B,Student 47 3A,Student 47 3B,Student 47 4A,Student 47 4B,Student 47 5A,Student 47 5B,Student 47 6A,Student 47 6B
+48,Student 48 1A,Student 48 1B,Student 48 2A,Student 48 2B,Student 48 3A,Student 48 3B,Student 48 4A,Student 48 4B,Student 48 5A,Student 48 5B,Student 48 6A,Student 48 6B
+49,Student 49 1A,Student 49 1B,Student 49 2A,Student 49 2B,Student 49 3A,Student 49 3B,Student 49 4A,Student 49 4B,Student 49 5A,Student 49 5B,Student 49 6A,Student 49 6B
+50,Student 50 1A,Student 50 1B,Student 50 2A,Student 50 2B,Student 50 3A,Student 50 3B,Student 50 4A,Student 50 4B,Student 50 5A,Student 50 5B,Student 50 6A,Student 50 6B

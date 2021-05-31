@@ -1,0 +1,12 @@
+grupo('1A').
+grupo('1B').
+grupo('2A').
+grupo('2B').
+grupo('3A').
+grupo('3B').
+grupo('4A').
+grupo('4B').
+grupo('5A').
+grupo('5B').
+grupo('6A').
+grupo('6B').
